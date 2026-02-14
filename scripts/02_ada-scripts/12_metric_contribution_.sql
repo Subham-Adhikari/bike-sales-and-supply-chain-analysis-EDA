@@ -59,6 +59,19 @@ GO
 
 
 
-
+-- Average shipping time in days = ?
+--ANS: 7 DAYS
+SELECT 
+	AVG(dayDifference)
+FROM
+(
+	SELECT
+		order_date,
+		shipping_date,
+		DATEDIFF(DAY, order_date, shipping_date) dayDifference
+	FROM gold.fact_sales
+	WHERE order_date IS NOT NULL OR shipping_date IS NOT NULL
+)T;
+GO
 
 
