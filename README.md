@@ -41,6 +41,22 @@ Demonstrates efficient logistics operations and strong fulfillment capabilities.
 
 ---
 
+## 💼 Business Recommendations
+
+Based on the analysis, the following strategic actions are recommended:
+
+1. **Customer Retention Program**  
+   Implement targeted retention strategies for top 10% high-value customers to protect 40% of revenue
+
+2. **Customer Acquisition Strategy**  
+   Diversify customer base to reduce concentration risk and dependency on small customer segment
+
+3. **Product Diversification**  
+   Expand beyond Bikes category to reduce 96% revenue dependency on single product line
+
+4. **Leverage Operational Strength**  
+   Maintain and market 100% on-time delivery as competitive advantage in customer acquisition
+
 ## 🛠️ Technical Approach
 
 ### SQL Techniques Used:
@@ -71,24 +87,6 @@ Demonstrates efficient logistics operations and strong fulfillment capabilities.
 - `product_key`, `product_id`, `product_name`
 - `category`, `subcategory`, `product_line`
 - `cost`, `maintenance`, `start_date`
-
----
-
-## 💼 Business Recommendations
-
-Based on the analysis, the following strategic actions are recommended:
-
-1. **Customer Retention Program**  
-   Implement targeted retention strategies for top 10% high-value customers to protect 40% of revenue
-
-2. **Customer Acquisition Strategy**  
-   Diversify customer base to reduce concentration risk and dependency on small customer segment
-
-3. **Product Diversification**  
-   Expand beyond Bikes category to reduce 96% revenue dependency on single product line
-
-4. **Leverage Operational Strength**  
-   Maintain and market 100% on-time delivery as competitive advantage in customer acquisition
 
 ---
 
