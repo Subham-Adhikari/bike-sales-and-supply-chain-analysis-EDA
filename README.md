@@ -57,6 +57,8 @@ Based on the analysis, the following strategic actions are recommended:
 4. **Leverage Operational Strength**  
    Maintain and market 100% on-time delivery as competitive advantage in customer acquisition
 
+---
+
 ## 🛠️ Technical Approach
 
 ### SQL Techniques Used:
