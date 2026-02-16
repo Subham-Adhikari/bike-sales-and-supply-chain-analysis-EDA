@@ -217,3 +217,40 @@ SELECT
 FROM mom_RevenueGrowthRate
 WHERE previous_sales_amount IS NOT NULL;
 GO
+
+
+/*
+
+Which products are underperforming (low sales despite high inventory cost)? 
+(Inventory optimization)
+
+*/
+
+SELECT
+	P.product_key,
+	P.cost, --DONT SUM IT, IT WILL CREATE AMBIGUITY RESULLT, THIS COST IS UNIQUER PER PRODUCT
+	COALESCE(SUM(F.sales_amount), 0) sales_amount
+FROM gold.dim_products P
+LEFT JOIN gold.fact_sales F
+ON P.product_key = F.product_key
+GROUP BY P.product_key, P.cost
+ORDER BY sales_amount ASC, cost DESC;
+GO
+
+
+-- SKU = Stock Keeping Unit = Unique product identifier
+
+-- EXAMPLES:
+-- T-shirt Red M    → SKU001
+-- T-shirt Red L    → SKU002  (different size = different SKU)
+-- T-shirt Blue M   → SKU003  (different color = different SKU)
+
+-- KEY POINTS:
+-- ✅ Each SKU = Own inventory + sales data
+-- ✅ "Underperforming Products" ≈ "Underperforming SKUs" (same analysis)
+
+-- WHY IT MATTERS:
+-- Track inventory at most granular level
+-- Identify specific variants that don't sell
+-- Make targeted decisions (discount, stop ordering, etc.)
+
